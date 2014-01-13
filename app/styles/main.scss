@@ -1,0 +1,19 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import 'style.css';
+
+.nav-main {
+  h1.logo {
+    font-size: 120%;
+    line-height: 55px;
+  }
+  
+  .nav {
+    width: 40%;
+  }
+}
+
+body {
+  padding-top: 77px;
+}
