@@ -17,3 +17,21 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 body {
   padding-top: 77px;
 }
+
+.map {
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+
+  #map-canvas {
+    height: 100%;
+    min-height: 400px;
+  }
+
+  .btn-large {
+    position: relative;
+    left: 50%;
+    bottom: 41px;
+    margin-left: -173.5px;
+  }
+}
