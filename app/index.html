@@ -49,8 +49,9 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <h3>Overview</h3>
-            <p>The PubNub Fleet Management Solution Kit provides the real-time building blocks to jump start the development of a transportation management application, including taxi, fleet management and delivery service apps. Built on the PubNub Real-Time Network, the solution kit components are supported on over 50+ SDKs and are globally-scaled, reliable and secure.
+            <h3>The PubNub Transportation Solution Kit</h3>
+            <p>
+            The PubNub Fleet Management Solution Kit provides the real-time building blocks to jump start the development of a transportation management application, including taxi, fleet management and delivery service apps. Built on the PubNub Real-Time Network, the solution kit components are supported on over 50+ SDKs and are globally-scaled, reliable and secure.
             </p>
           </div>
         </div>
@@ -59,24 +60,31 @@
 
       <section class="red">
       <div class="container">
-
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <h3>Location Tracking</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quaerat facere doloribus natus nemo modi aliquam debitis iste magnam tenetur. Accusantium beatae numquam excepturi iure voluptates unde molestiae quidem accusamus!</p>
+            <p>Stream location data from each vehicle and see a real-time map view of all vehicle locations. Understand delivery or arrival times to provide better customer experience.</p>
           </div>
 
-          <div class="col-sm-4">
+          <div class="col-sm-6">
+            <img src="/images/location-tracking.png" alt="Location Tracking" width="500" height="300" />
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <img src="/images/phone-concept.png" alt="Phone" width="174" height="300" />
+          </div>
+
+          <div class="col-sm-6">
             <h3>Dispatch</h3>
             <p>Lorem ipsum</p>
           </div>
-
-          <div class="col-sm-4">
-            <h3>Vehicle Status</h3>
-            <p>Lorem ipsum</p>
-          </div>
         </div>
-
       </div>
       </section>
 
@@ -121,11 +129,11 @@
                 <ol class="list-code animate" data-type="two">
                   <li><span class="comment">// say hello!</span></li>
                   <li>&nbsp;</li>
-                  <li>pubnub.Publish<<span class="blue">string</span>>(channel=<span class="red">"mychannel"</span>,</li>
-                  <li>publishMsg=<span class="red">"hello!"</span>, DisplayReturnMessage,</li>
+                  <li>pubnub.Publish<<span class="blue">string</span>>(channel=<span class="red">"status_update"</span>,</li>
+                  <li>publishMsg=<span class="red">"Pickup Ready!"</span>, DisplayReturnMessage,</li>
                   <li>DisplayErrorMessage);</li>
                   <li>&nbsp;</li>
-                  <li>pubnub.Subscribe<<span class="blue">string</span>>(channel=<span class="red">"mychannel"</span>,</li>
+                  <li>pubnub.Subscribe<<span class="blue">string</span>>(channel=<span class="red">"status_update"</span>,</li>
                   <li>DisplaySubscribeReturnMessage,</li>
                   <li>DisplaySubscribeConnectStatusMessage,</li>
                   <li>DisplayErrorMessage);</li>
@@ -138,7 +146,7 @@
                   <li>[PubNub subscribeOnChannel:channel_1];</li>
                   <li>&nbsp;</li>
                   <li><span class="comment">## Publish on the channel</span></li>
-                  <li>[PubNub sendMessage:<span class="red">@"hello!"</span></li>
+                  <li>[PubNub sendMessage:<span class="red">@"Pickup Ready!"</span></li>
                   <li>toChannel:channel_1];</li>
                 </ol>
               </div>
@@ -151,7 +159,10 @@
       <section class="gray">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-6">
+            <img src="/images/geo-fencing.png" alt="Geo Fencing" width="500" height="300" />
+          </div>
+          <div class="col-sm-6">
             <h3>Geo Fencing</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quaerat facere doloribus natus nemo modi aliquam debitis iste magnam tenetur. Accusantium beatae numquam excepturi iure voluptates unde molestiae quidem accusamus!</p>
           </div>
@@ -165,7 +176,7 @@
           <div class="row">
             <div class="col-lg-12">
               <h3 align="center" class="footer-title">
-                More with the <a href="http://pubnub.com"> PubNub Real-Time Network </a>
+                More with the <a href="http://pubnub.com" class="text-red"> PubNub Real-Time Network </a>
               </h3>
               <p align="center">
               Do you like this solution kit?
@@ -173,7 +184,7 @@
               Subscribe to
               <a
                 target="pntwitter"
-                href="http://twitter.com/PubNub">@PubNub</a>
+                href="http://twitter.com/PubNub" class="text-red">@PubNub</a>
               news and updates!<br><BR>
               </p>
 
