@@ -41,16 +41,17 @@
         </header>
 
         <section class="blue map">
-        <div id="map-canvas"></div>
-        <a href="#get-started" class="btn btn-large btn-primary btn-modal on-top">Get Started</a>
+          <div id="map-canvas"></div>
+          <a href="#get-started" class="btn btn-large btn-primary btn-modal on-top">Get Started</a>
         </section>
 
       <section class="blue">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <h3>section.blue</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quaerat facere doloribus natus nemo modi aliquam debitis iste magnam tenetur. Accusantium beatae numquam excepturi iure voluptates unde molestiae quidem accusamus!</p>
+            <h3>Overview</h3>
+            <p>The PubNub Fleet Management Solution Kit provides the real-time building blocks to jump start the development of a transportation management application, including taxi, fleet management and delivery service apps. Built on the PubNub Real-Time Network, the solution kit components are supported on over 50+ SDKs and are globally-scaled, reliable and secure.
+            </p>
           </div>
         </div>
       </div>
@@ -60,22 +61,19 @@
       <div class="container">
 
         <div class="row">
-          <div class="col-sm-12">
-            <h3>section.red</h3>
+          <div class="col-sm-4">
+            <h3>Location Tracking</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quaerat facere doloribus natus nemo modi aliquam debitis iste magnam tenetur. Accusantium beatae numquam excepturi iure voluptates unde molestiae quidem accusamus!</p>
           </div>
-        </div>
 
-      </div>
-      </section>
+          <div class="col-sm-4">
+            <h3>Dispatch</h3>
+            <p>Lorem ipsum</p>
+          </div>
 
-      <section class="gray">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-12">
-            <h3>section.gray</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quaerat facere doloribus natus nemo modi aliquam debitis iste magnam tenetur. Accusantium beatae numquam excepturi iure voluptates unde molestiae quidem accusamus!</p>
+          <div class="col-sm-4">
+            <h3>Vehicle Status</h3>
+            <p>Lorem ipsum</p>
           </div>
         </div>
 
@@ -83,12 +81,91 @@
       </section>
 
       <section>
+      <div class="container">
+        <div class="row padding-top-double">
+          <div class="col-sm-6">
+            <h3>Vehicle Status</h3>
+            <p>See a real-time view of your fleet status and availability</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="code-wrap code-switch">
+              <div class="code-header">
+                <ul>
+                  <li class="red"><i class="fa fa-circle"></i></li>
+                  <li class="yellow"><i class="fa fa-circle"></i></li>
+                  <li class="green"><i class="fa fa-circle"></i></li>
+                </ul>
+              </div>
+              <div class="code-content">
+                <input type="radio" name="code-switcher" id="one" checked>
+                <label for="one">Javascript</label>
+                <input type="radio" name="code-switcher" id="two">
+                <label for="two">.NET</label>
+                <input type="radio" name="code-switcher" id="three">
+                <label for="three">iOS</label>
+
+                <ol class="list-code animate" data-type="one">
+                  <li><span class="comment">// say hello!</span></li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.publish({</li>
+                  <li class="indent">channel : <span class="blue">'status_update'</span>,</li>
+                  <li class="indent">message : <span class="blue">'Pickup Ready!'</span></li>
+                  <li>});</li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.subscribe({</li>
+                  <li class="indent">channel : <span class="blue">'status_update'</span>,</li>
+                  <li class="indent">message : <span class="red">function</span>(m){console.log(m)}</li>
+                  <li>});</li>
+                </ol>
+
+                <ol class="list-code animate" data-type="two">
+                  <li><span class="comment">// say hello!</span></li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.Publish<<span class="blue">string</span>>(channel=<span class="red">"mychannel"</span>,</li>
+                  <li>publishMsg=<span class="red">"hello!"</span>, DisplayReturnMessage,</li>
+                  <li>DisplayErrorMessage);</li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.Subscribe<<span class="blue">string</span>>(channel=<span class="red">"mychannel"</span>,</li>
+                  <li>DisplaySubscribeReturnMessage,</li>
+                  <li>DisplaySubscribeConnectStatusMessage,</li>
+                  <li>DisplayErrorMessage);</li>
+                </ol>
+
+                <ol class="list-code animate" data-type="three">
+                  <li><span class="comment">// say hello!</span></li>
+                  <li>&nbsp;</li>
+                  <li><span class="comment">## Subscribe on the channel</span></li>
+                  <li>[PubNub subscribeOnChannel:channel_1];</li>
+                  <li>&nbsp;</li>
+                  <li><span class="comment">## Publish on the channel</span></li>
+                  <li>[PubNub sendMessage:<span class="red">@"hello!"</span></li>
+                  <li>toChannel:channel_1];</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3>Geo Fencing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quaerat facere doloribus natus nemo modi aliquam debitis iste magnam tenetur. Accusantium beatae numquam excepturi iure voluptates unde molestiae quidem accusamus!</p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section>
       <div class="footer">
         <div class="container">
           <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-12">
               <h3 align="center" class="footer-title">
-                More with <a href="http://pubnub.com"> PubNub Real-Time Network </a>
+                More with the <a href="http://pubnub.com"> PubNub Real-Time Network </a>
               </h3>
               <p align="center">
               Do you like this solution kit?
@@ -99,37 +176,17 @@
                 href="http://twitter.com/PubNub">@PubNub</a>
               news and updates!<br><BR>
               </p>
-            </div>
 
-            <div class="col-lg-5">
               <div class="footer-banner">
-                <h3 class="footer-title" align="center">
-                  <a href="http://pubnub.com"><div class="pubnub-logo-footer"></div></A>
-                  Real-Time Network
-                </h3>
-
                 <div class=row-margin-small>
-                  <a class="btn btn-info btn-lg btn-block"
+                  <div class="col-sm-4 col-sm-offset-4">
+                    <a class="btn btn-primary btn-lg btn-block"
                     alt="PubNub Real-Time Network"
                     target=freetrial
                     href="http://www.pubnub.com/free-trial">
-                    Try PubNub Today!</a></div>
-
-                <!--ul class="list-group">
-                <li class="list-group-item">
-                Core Building Blocks for Secure Real-Time</li>
-                <li class="list-group-item">
-                A Lot of Useful Samples</li>
-                <li class="list-group-item">
-                Real-Time on a Redundant, Global Network</li>
-                <li class="list-group-item">
-                Rapid Development and On-Demand Scaling</li>
-                <li class="list-group-item">
-                Drops into Mobile and Web by Default</li>
-                <li class="list-group-item">
-                Over 50 Supported SDKs</li>
-                </ul-->
-
+                    Try PubNub Today!</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
