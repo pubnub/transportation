@@ -1,6 +1,8 @@
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+$fa-font-path: "../bower_components/font-awesome/fonts";
 
+@import '../bower_components/font-awesome/scss/font-awesome';
 @import 'style.css';
 
 .nav-main {
@@ -37,3 +39,8 @@ body {
     margin-left: -173.5px;
   }
 }
+
+.fa-10x {
+  font-size: 10em;
+}
+

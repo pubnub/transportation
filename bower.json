@@ -5,7 +5,8 @@
     "sass-bootstrap": "~2.3.0",
     "requirejs": "~2.1.4",
     "modernizr": "~2.6.2",
-    "jquery": "~1.9.1"
+    "jquery": "~1.9.1",
+    "font-awesome": "~4.0.3"
   },
   "devDependencies": {}
 }
