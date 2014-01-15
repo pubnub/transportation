@@ -53,13 +53,6 @@ require.config({
 require(['app', 'jquery'], function (app, $) {
     'use strict';
     // use app here
-    console.log(app);
+    app.init();
     console.log('Running jQuery %s', $().jquery);
-
-    var mapOptions = {
-      center: new google.maps.LatLng(-34.397, 150.644),      
-      zoom: 8
-    };
-
-    var map = new google.maps.Map(document.querySelector('#map-canvas'), mapOptions);
 });
