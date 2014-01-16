@@ -1,5 +1,5 @@
 /*global define */
-define([], function () {
+define(['animation_manager'], function (AnimationManager) {
     'use strict';
 
     return {
@@ -22,6 +22,8 @@ define([], function () {
         };
 
         this.map = new google.maps.Map(document.querySelector('#map-canvas'), mapOptions);
+        
+        AnimationManager.initialize();
       },
 
       listenForBusUpdates: function () {
