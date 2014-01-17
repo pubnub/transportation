@@ -10,7 +10,7 @@ define([], function () {
         if (el) {
           animations[i] = {
             el: el,
-            y: el.getBoundingClientRect().top - (window.innerHeight >> 1)
+            y: el.getBoundingClientRect().top - (window.innerHeight >> 1) + (window.scrollTop || window.scrollY)
           };
         }
       });
@@ -34,6 +34,7 @@ define([], function () {
           }
         }
       };
+
       animate();
       window.addEventListener('scroll', function () {
         requestAnimationFrame(animate);
