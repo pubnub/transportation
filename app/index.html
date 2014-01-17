@@ -42,7 +42,7 @@
 
         <section class="blue map">
           <div id="map-canvas"></div>
-          <a href="#get-started" class="btn btn-large btn-primary btn-modal on-top">Get Started</a>
+          <a href="http://pubnub.com/get-started" target="_blank" class="btn btn-large btn-primary btn-modal on-top">Get Started</a>
         </section>
 
       <section class="blue">
@@ -78,6 +78,7 @@
         <div class="row">
           <div class="col-sm-6 text-center">
             <img class="shake animate-scroll" src="/images/phone-concept.png" alt="Phone" width="174" height="300" />
+            <img id="mobile-alert" class="animate-scroll" src="/images/mobile-alert-1.png" alt="Mobile Alert" width="93" height="35" />
           </div>
 
           <div class="col-sm-6">
@@ -98,7 +99,186 @@
             <p>See a real-time view of your fleet status and availability. Detect when vehicles are available, booked, fully-loaded or other status.</p>
           </div>
           <div class="col-sm-6">
-            <div class="code-wrap code-switch swing animate-scroll">
+            <ul class="vehicle-status">
+              <li>
+                <img src="/images/car-avatar.png" alt="Car Avatar" width="56" height="56" />
+                <div class="content">
+                  <h6>Vehicle 1</h6>
+                  <small>Offline</small>
+                  <small class="online">Online</small>
+                </div>
+                <div class="point"></div>
+              </li>
+              <li>
+                <img src="/images/car-avatar.png" alt="Car Avatar" width="56" height="56" />
+                <div class="content">
+                  <h6>Vehicle 2</h6>
+                  <small>Offline</small>
+                  <small class="online">Online</small>
+                </div>
+                <div class="point"></div>
+              </li>
+              <li>
+                <img src="/images/car-avatar.png" alt="Car Avatar" width="56" height="56" />
+                <div class="content">
+                  <h6>Vehicle 3</h6>
+                  <small>Offline</small>
+                  <small class="online">Online</small>
+                </div>
+                <div class="point"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <img class="pulse animate-scroll" src="/images/geo-fencing.png" alt="Geo Fencing" width="500" height="300" />
+          </div>
+          <div class="col-sm-6">
+            <h3>Geo Fencing</h3>
+            <p>
+              Streamline transportation operations based on geography
+              Trigger actions and alerts based on vehicle location and geographic boundaries 
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="blue">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Reliable Connectivity</h3>
+            <p>
+              We take connectivity for granted but it isn't always a trivial matter. Moving vehicles often drop connections, switch between towers, go thru tunnels. High-value messages need to arrive, otherwise resulting in business loss.
+            </p>
+          </div>
+          <div class="col-sm-6 text-center">
+            <i class="fa fa-signal fa-10x pulse animate-scroll"></i>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Getting Started</h3>
+            <p>Getting started is as easy as embedding the PubNub library into your HTML file. This is done via a script tag and also allows for selecting the specific version you would like to work with. Our library is served via a CDN for the guaranteed fastest performance download.</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="code-wrap pulse animate-scroll" style="height: 220px">
+              <div class="code-header">
+                <ul>
+                  <li class="red"><i class="fa fa-circle"></i></li>
+                  <li class="yellow"><i class="fa fa-circle"></i></li>
+                  <li class="green"><i class="fa fa-circle"></i></li>
+                </ul>
+              </div>
+              <div class="code-content">
+                <ol class="list-code animate" data-type="one">
+                  <li><span>&lt;script src=<span class="blue">"http://cdn.pubnub.com/pubnub.js"</span>&gt;</span></li>
+                  <li>&nbsp;</li>
+                  <li>var pubnub = PUBNUB.init({</li>
+                  <li class="indent">subscribe_key: <span class="blue">'demo'</span>,</li>
+                  <li class="indent">publish_key: <span class="blue">'demo'</span></li>
+                  <li>});</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <br />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Publishing Messages</h3>
+            <p>Publishing messages allows you to notify other users in real-time. This can be used for geolocation updates or even dispatch!</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="code-wrap code-switch pulse animate-scroll">
+              <div class="code-header">
+                <ul>
+                  <li class="red"><i class="fa fa-circle"></i></li>
+                  <li class="yellow"><i class="fa fa-circle"></i></li>
+                  <li class="green"><i class="fa fa-circle"></i></li>
+                </ul>
+              </div>
+              <div class="code-content">
+                <input type="radio" name="code-switcher" id="one" checked>
+                <label for="one">Javascript</label>
+                <input type="radio" name="code-switcher" id="two">
+                <label for="two">.NET</label>
+                <input type="radio" name="code-switcher" id="three">
+                <label for="three">iOS</label>
+
+                <ol class="list-code animate" data-type="one">
+                  <li><span class="comment">// say hello!</span></li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.publish({</li>
+                  <li class="indent">channel : <span class="blue">'status_update'</span>,</li>
+                  <li class="indent">message : <span class="blue">'Pickup Ready!'</span></li>
+                  <li>});</li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.subscribe({</li>
+                  <li class="indent">channel : <span class="blue">'status_update'</span>,</li>
+                  <li class="indent">message : <span class="red">function</span>(m){console.log(m)}</li>
+                  <li>});</li>
+                </ol>
+
+                <ol class="list-code animate" data-type="two">
+                  <li><span class="comment">// say hello!</span></li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.Publish<<span class="blue">string</span>>(channel=<span class="red">"status_update"</span>,</li>
+                  <li>publishMsg=<span class="red">"Pickup Ready!"</span>, DisplayReturnMessage,</li>
+                  <li>DisplayErrorMessage);</li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.Subscribe<<span class="blue">string</span>>(channel=<span class="red">"status_update"</span>,</li>
+                  <li>DisplaySubscribeReturnMessage,</li>
+                  <li>DisplaySubscribeConnectStatusMessage,</li>
+                  <li>DisplayErrorMessage);</li>
+                </ol>
+
+                <ol class="list-code animate" data-type="three">
+                  <li><span class="comment">// say hello!</span></li>
+                  <li>&nbsp;</li>
+                  <li><span class="comment">## Subscribe on the channel</span></li>
+                  <li>[PubNub subscribeOnChannel:channel_1];</li>
+                  <li>&nbsp;</li>
+                  <li><span class="comment">## Publish on the channel</span></li>
+                  <li>[PubNub sendMessage:<span class="red">@"Pickup Ready!"</span></li>
+                  <li>toChannel:channel_1];</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <br />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Subscribing to Messages</h3>
+            <p>Subscribing to a channel allows you to listen for real-time updates from anyone who is publishing to the same channel!</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="code-wrap code-switch pulse animate-scroll">
               <div class="code-header">
                 <ul>
                   <li class="red"><i class="fa fa-circle"></i></li>
@@ -158,39 +338,6 @@
       </div>
       </section>
 
-      <section class="gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <img class="wobble animate-scroll" src="/images/geo-fencing.png" alt="Geo Fencing" width="500" height="300" />
-          </div>
-          <div class="col-sm-6">
-            <h3>Geo Fencing</h3>
-            <p>
-              Streamline transportation operations based on geography
-              Trigger actions and alerts based on vehicle location and geographic boundaries 
-            </p>
-          </div>
-        </div>
-      </div>
-      </section>
-
-      <section class="blue">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <h3>Reliable Connectivity</h3>
-            <p>
-              We take connectivity for granted but it isn't always a trivial matter. Moving vehicles often drop connections, switch between towers, go thru tunnels. High-value messages need to arrive, otherwise resulting in business loss.
-            </p>
-          </div>
-          <div class="col-sm-6 text-center">
-            <i class="fa fa-signal fa-10x pulse animate-scroll"></i>
-          </div>
-        </div>
-      </div>
-      </section>
-
       <section>
       <div class="footer">
         <div class="container">
@@ -212,7 +359,7 @@
               <div class="footer-banner">
                 <div class=row-margin-small>
                   <div class="col-sm-4 col-sm-offset-4">
-                    <a class="btn btn-primary btn-lg btn-block" alt="PubNub Real-Time Network" target=freetrial href="http://www.pubnub.com/free-trial">Try PubNub Today!</a>
+                    <a class="btn btn-primary btn-lg btn-block" alt="PubNub Real-Time Network" target=freetrial href="http://www.pubnub.com/get-started">Try PubNub Today!</a>
                   </div>
                 </div>
               </div>

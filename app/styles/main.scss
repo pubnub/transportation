@@ -2,6 +2,7 @@ $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 $fa-font-path: "../bower_components/font-awesome/fonts";
 
+@import 'mixins';
 @import '../bower_components/font-awesome/scss/font-awesome';
 @import 'animate.css';
 @import 'style.css';
@@ -44,4 +45,152 @@ body {
 .fa-10x {
   font-size: 10em;
 }
+
+// Dispatch mobile phone
+#mobile-alert {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -46.5px;
+  opacity: 0;
+}
+
+#mobile-alert.animated {
+  @include animation(100ms, 3s, popInFadeOut);
+}
+
+@include keyframe(popInFadeOut) {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3); }
+
+  2% {
+    opacity: 1;
+    -webkit-transform: scale(0.3); }
+
+  4% {
+    -webkit-transform: scale(1.2); }
+
+  10% {
+    -webkit-transform: scale(1);
+    opacity: 1; }
+
+  60% {
+    opacity: 1; }
+
+  100% {
+    opacity: 1; } 
+}
+
+// Vehicle Status
+.vehicle-status {
+  list-style: none;
+  
+  li {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #cecece;
+
+    &:after {
+      clear: both;
+      display: table;
+      content: " ";
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    img {
+      float: left;
+      @include animation(0.1s, 6s, dim);
+      @include animation-iteration(infinite);
+    }
+
+    .content {
+      padding: 7px 0 0 20px;
+      float: left;
+      position: relative;
+
+      h6 {
+        margin: 0;
+      }
+
+      .online {
+        @include animation(0.1s, 6s, hide);
+        @include animation-iteration(infinite);
+        position: absolute;
+        left: 20px;
+        top: 33px;
+        background: #f9f9f9;
+      }
+    }
+
+    .point {
+      @include animation(0.1s, 6s, dim);
+      @include animation-iteration(infinite);
+      float: right;
+      margin: 17px 0 0 0;
+      position: relative;
+      top: auto;
+      right: auto;
+      background: #2d94c1;
+      width: 18px;
+      height: 18px;
+      display: block;
+      border-radius: 20px;
+    }
+
+    // Delays to make it seem random
+    &:first-of-type {
+      img { @include animation-delay(1s); }
+      .content .online { @include animation-delay(1s); }
+      .point { @include animation-delay(1s); }
+    }
+
+    &:last-of-type {
+      img { @include animation-delay(5s); }
+      .content .online { @include animation-delay(5s); }
+      .point { @include animation-delay(5s); }
+    }
+  }
+}
+
+@include keyframe(dim) {
+  0% {
+    opacity: 0.3; }
+
+  10% {
+    opacity: 0.3; }
+
+  12% {
+    opacity: 1; }
+
+  90% {
+    opacity: 1; }
+
+  92% {
+    opacity: 0.3; }
+
+  100% {
+    opacity: 0.3; } }
+
+@include keyframe(hide) {
+  0% {
+    opacity: 0; }
+
+  10% {
+    opacity: 0; }
+
+  12% {
+    opacity: 1; }
+
+  90% {
+    opacity: 1; }
+
+  92% {
+    opacity: 0; }
+
+  100% {
+    opacity: 0; } }
 

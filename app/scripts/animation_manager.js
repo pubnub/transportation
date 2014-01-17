@@ -6,7 +6,6 @@ define([], function () {
   return {
     initialize: function () {
       var elements = Array.prototype.slice.call(document.querySelectorAll('.animate-scroll'), 0);
-      console.log(elements);
       elements.forEach(function (el, i) {
         if (el) {
           animations[i] = {

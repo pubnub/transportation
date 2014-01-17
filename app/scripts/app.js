@@ -12,7 +12,7 @@ define(['animation_manager'], function (AnimationManager) {
 
         var mapOptions = {
           center: new google.maps.LatLng(37.774682, -122.419710),      
-          zoom: 13,
+          zoom: 15,
           disableDefaultUI: true,
           scrollwheel: false,
           navigationControl: false,
