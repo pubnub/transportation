@@ -137,7 +137,10 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <img class="pulse animate-scroll" src="/images/geo-fencing.png" alt="Geo Fencing" width="500" height="300" />
+            <div id="geo-fencing">
+              <img src="/images/geo-fencing.png" alt="Geo Fencing" width="500" height="300" />
+              <img class="geo-alert animate-scroll" src="/images/alert.png" alt="Alert" width="35" height="48" />
+            </div>
           </div>
           <div class="col-sm-6">
             <h3>Geo Fencing</h3>
@@ -208,7 +211,7 @@
             <p>Publishing messages allows you to notify other users in real-time. This can be used for geolocation updates or even dispatch!</p>
           </div>
           <div class="col-sm-6">
-            <div class="code-wrap code-switch pulse animate-scroll">
+            <div class="code-wrap pulse animate-scroll" style="height: 220px">
               <div class="code-header">
                 <ul>
                   <li class="red"><i class="fa fa-circle"></i></li>
@@ -217,49 +220,13 @@
                 </ul>
               </div>
               <div class="code-content">
-                <input type="radio" name="code-switcher" id="one" checked>
-                <label for="one">Javascript</label>
-                <input type="radio" name="code-switcher" id="two">
-                <label for="two">.NET</label>
-                <input type="radio" name="code-switcher" id="three">
-                <label for="three">iOS</label>
-
                 <ol class="list-code animate" data-type="one">
-                  <li><span class="comment">// say hello!</span></li>
+                  <li><span class="comment">// Report location</span></li>
                   <li>&nbsp;</li>
                   <li>pubnub.publish({</li>
-                  <li class="indent">channel : <span class="blue">'status_update'</span>,</li>
-                  <li class="indent">message : <span class="blue">'Pickup Ready!'</span></li>
+                  <li class="indent">channel : <span class="blue">'location_update'</span>,</li>
+                  <li class="indent">message : { id: 10, lat: 37.774682, lng: -122.419710 }</li>
                   <li>});</li>
-                  <li>&nbsp;</li>
-                  <li>pubnub.subscribe({</li>
-                  <li class="indent">channel : <span class="blue">'status_update'</span>,</li>
-                  <li class="indent">message : <span class="red">function</span>(m){console.log(m)}</li>
-                  <li>});</li>
-                </ol>
-
-                <ol class="list-code animate" data-type="two">
-                  <li><span class="comment">// say hello!</span></li>
-                  <li>&nbsp;</li>
-                  <li>pubnub.Publish<<span class="blue">string</span>>(channel=<span class="red">"status_update"</span>,</li>
-                  <li>publishMsg=<span class="red">"Pickup Ready!"</span>, DisplayReturnMessage,</li>
-                  <li>DisplayErrorMessage);</li>
-                  <li>&nbsp;</li>
-                  <li>pubnub.Subscribe<<span class="blue">string</span>>(channel=<span class="red">"status_update"</span>,</li>
-                  <li>DisplaySubscribeReturnMessage,</li>
-                  <li>DisplaySubscribeConnectStatusMessage,</li>
-                  <li>DisplayErrorMessage);</li>
-                </ol>
-
-                <ol class="list-code animate" data-type="three">
-                  <li><span class="comment">// say hello!</span></li>
-                  <li>&nbsp;</li>
-                  <li><span class="comment">## Subscribe on the channel</span></li>
-                  <li>[PubNub subscribeOnChannel:channel_1];</li>
-                  <li>&nbsp;</li>
-                  <li><span class="comment">## Publish on the channel</span></li>
-                  <li>[PubNub sendMessage:<span class="red">@"Pickup Ready!"</span></li>
-                  <li>toChannel:channel_1];</li>
                 </ol>
               </div>
             </div>
@@ -278,7 +245,7 @@
             <p>Subscribing to a channel allows you to listen for real-time updates from anyone who is publishing to the same channel!</p>
           </div>
           <div class="col-sm-6">
-            <div class="code-wrap code-switch pulse animate-scroll">
+            <div class="code-wrap pulse animate-scroll" style="height: 220px">
               <div class="code-header">
                 <ul>
                   <li class="red"><i class="fa fa-circle"></i></li>
@@ -287,49 +254,13 @@
                 </ul>
               </div>
               <div class="code-content">
-                <input type="radio" name="code-switcher" id="one" checked>
-                <label for="one">Javascript</label>
-                <input type="radio" name="code-switcher" id="two">
-                <label for="two">.NET</label>
-                <input type="radio" name="code-switcher" id="three">
-                <label for="three">iOS</label>
-
                 <ol class="list-code animate" data-type="one">
-                  <li><span class="comment">// say hello!</span></li>
-                  <li>&nbsp;</li>
-                  <li>pubnub.publish({</li>
-                  <li class="indent">channel : <span class="blue">'status_update'</span>,</li>
-                  <li class="indent">message : <span class="blue">'Pickup Ready!'</span></li>
-                  <li>});</li>
+                  <li><span class="comment">// Listen for location updates</span></li>
                   <li>&nbsp;</li>
                   <li>pubnub.subscribe({</li>
-                  <li class="indent">channel : <span class="blue">'status_update'</span>,</li>
-                  <li class="indent">message : <span class="red">function</span>(m){console.log(m)}</li>
+                  <li class="indent">channel : <span class="blue">'location_update'</span>,</li>
+                  <li class="indent">message : <span class="red">function</span>(m){ <span class="comment">// Application code</span> }</li>
                   <li>});</li>
-                </ol>
-
-                <ol class="list-code animate" data-type="two">
-                  <li><span class="comment">// say hello!</span></li>
-                  <li>&nbsp;</li>
-                  <li>pubnub.Publish<<span class="blue">string</span>>(channel=<span class="red">"status_update"</span>,</li>
-                  <li>publishMsg=<span class="red">"Pickup Ready!"</span>, DisplayReturnMessage,</li>
-                  <li>DisplayErrorMessage);</li>
-                  <li>&nbsp;</li>
-                  <li>pubnub.Subscribe<<span class="blue">string</span>>(channel=<span class="red">"status_update"</span>,</li>
-                  <li>DisplaySubscribeReturnMessage,</li>
-                  <li>DisplaySubscribeConnectStatusMessage,</li>
-                  <li>DisplayErrorMessage);</li>
-                </ol>
-
-                <ol class="list-code animate" data-type="three">
-                  <li><span class="comment">// say hello!</span></li>
-                  <li>&nbsp;</li>
-                  <li><span class="comment">## Subscribe on the channel</span></li>
-                  <li>[PubNub subscribeOnChannel:channel_1];</li>
-                  <li>&nbsp;</li>
-                  <li><span class="comment">## Publish on the channel</span></li>
-                  <li>[PubNub sendMessage:<span class="red">@"Pickup Ready!"</span></li>
-                  <li>toChannel:channel_1];</li>
                 </ol>
               </div>
             </div>

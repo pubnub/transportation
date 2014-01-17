@@ -194,3 +194,22 @@ body {
   100% {
     opacity: 0; } }
 
+// Geo Fencing
+#geo-fencing {
+  display: block;
+  width: 500px;
+  height: 300px;
+  position: relative;
+
+  .geo-alert {
+    position: absolute;
+    top: 55px;
+    right: 115px;
+    opacity: 0;
+
+    &.animated {
+      @include animation(0.1s, 3s, popInFadeOut);
+    }
+  }
+}
+
