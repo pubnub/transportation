@@ -46,6 +46,36 @@ body {
   font-size: 10em;
 }
 
+// Dispatch dummy application
+#dispatch-app {
+  display: block;
+  width: 229px;
+  height: 382px;
+  position: relative;
+  margin: 0 auto;
+
+  #dispatch-map {
+    display: block;
+    width: 204px;
+    height: 200px;
+    position: absolute;
+    top: 32px;
+    left: 13px;
+  }
+
+  #dispatch-text {
+    color: white;
+    display: block;
+    width: 204px;
+    height: 109px;
+    position: absolute;
+    top: 232px;
+    left: 13px;
+    text-align: center;
+    line-height: 109px;
+  }
+}
+
 // Dispatch mobile phone
 #mobile-alert {
   position: absolute;

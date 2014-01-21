@@ -1,5 +1,5 @@
 /*global define */
-define(['animation_manager'], function (AnimationManager) {
+define(['animation_manager', 'dispatch_app'], function (AnimationManager, DispatchApp) {
     'use strict';
 
     return {
@@ -24,6 +24,7 @@ define(['animation_manager'], function (AnimationManager) {
         this.map = new google.maps.Map(document.querySelector('#map-canvas'), mapOptions);
         
         AnimationManager.initialize();
+        DispatchApp.initialize(this.pubnub);
       },
 
       listenForBusUpdates: function () {
