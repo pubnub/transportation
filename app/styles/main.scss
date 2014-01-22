@@ -133,7 +133,7 @@ body {
 
     img {
       float: left;
-      @include animation(0.1s, 6s, dim);
+      @include animation(0.1s, 30s, dim);
       @include animation-iteration(infinite);
     }
 
@@ -147,17 +147,19 @@ body {
       }
 
       .online {
-        @include animation(0.1s, 6s, hide);
+        @include animation(0.1s, 30s, hide);
         @include animation-iteration(infinite);
         position: absolute;
         left: 20px;
         top: 33px;
+        display: block;
+        min-width: 150px;
         background: #f9f9f9;
       }
     }
 
     .point {
-      @include animation(0.1s, 6s, dim);
+      @include animation(0.1s, 30s, dim);
       @include animation-iteration(infinite);
       float: right;
       margin: 17px 0 0 0;
