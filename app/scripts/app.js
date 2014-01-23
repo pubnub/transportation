@@ -30,7 +30,7 @@ define(['animation_manager', 'dispatch_app'], function (AnimationManager, Dispat
         this.map = new google.maps.Map(document.querySelector('#map-canvas'), mapOptions);
         
         AnimationManager.initialize();
-        DispatchApp.initialize(this.pubnub);
+        DispatchApp.initialize();
         
         // Test the animation
         // this.createNewBus("special", new google.maps.LatLng(37.774682, -122.419710));

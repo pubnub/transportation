@@ -1,11 +1,9 @@
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
-$fa-font-path: "../bower_components/font-awesome/fonts";
+$fa-font-path: "../static/fonts";
 
 @import 'mixins';
 @import '../bower_components/font-awesome/scss/font-awesome';
-@import 'animate.css';
-@import 'style.css';
 
 .nav-main {
   h1.logo {
@@ -236,8 +234,8 @@ body {
 
   .geo-alert {
     position: absolute;
-    top: 106px;
-    right: 136px;
+    top: 94px;
+    left: 219px;
     opacity: 0;
 
     &.animated {
