@@ -1,0 +1,383 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="styles/8492ce3a.main.css">
+        <script src="scripts/vendor/d7100892.modernizr.js"></script>
+    </head>
+    <body>
+      <header class="navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar nav-main">
+              <h1 class="logo pull-left">
+                <a href="/"><img src="/images/963b44b4.pubnub.png" alt="Pub Nub" width="172" height="38">&nbsp;&nbsp;Connected Car Solution Kit</a>
+              </h1>
+
+              <ul class="nav pull-right">
+                <li><a href="http://github.com/pubnub/transportation" target="_blank">GitHub</a></li>
+                <li class="dropdown-link">
+                <a href="http://pubnub.com/developers" target="_blank">Developers</a>
+                </li>
+                <li><a href="http://pubnub.com/get-started">Get Started</a></li>
+              </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        </header>
+
+        <section class="blue map">
+          <div id="map-canvas"></div>
+          <a href="http://pubnub.com/get-started" target="_blank" class="btn btn-large btn-primary btn-modal on-top">Get Started</a>
+        </section>
+
+      <section class="blue">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3>The PubNub Connected Car Solution Kit</h3>
+            <p>
+              PubNub’s Connected Car Solution Kit provides the key building blocks for developers to deliver scalable, real-time transportation management and dispatch applications, including taxi, fleet management and delivery service. Connected cars require real-time signaling for effective dispatch and tracking, yet vehicles constantly change networks and cell towers, lose connectivity, and drop dedicated network connections.  Built on its global Real-Time Network and supported on over 50+ SDKs, PubNub’s Connected Car Solution Kit addresses the inherent challenges posed by connected vehicles, ensuring reliable, real-time message streaming and other key services like dispatch, location tracking, and geo-fencing.
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="red">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Location Tracking</h3>
+            <p>
+Provides a real-time map view of all vehicle locations by streaming location data from each vehicle for delivery or arrival information. Stream real-time geo coordinates using PubNub’s Data Push technology.
+            </p>
+          </div>
+
+          <div class="col-sm-6">
+            <img class="bounce animate-scroll" src="/images/bae45509.location-tracking.png" alt="Location Tracking" width="500" height="300">
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <div id="dispatch-app">
+              <img src="/images/9a7b21ec.dispatch.png" alt="Phone Dispatch" width="229" height="382">
+              <div id="dispatch-map"></div>
+              <div id="dispatch-text"></div>
+            </div>
+
+            <!--<img class="shake animate-scroll" src="/images/30fde105.phone-concept.png" alt="Phone" width="174" height="300" />
+            <img id="mobile-alert" class="animate-scroll" src="/images/83210636.mobile-alert-1.png" alt="Mobile Alert" width="93" height="35" />-->
+          </div>
+
+          <div class="col-sm-6">
+            <h3>Dispatch</h3>
+            <p>
+Responds to transportation demand in real-time by managing  messaging and response between vehicles and dispatch. Works seamlessly across all device platforms from desktop to mobile.              
+            </p>
+            <p>
+              <a class="btn btn-large btn-primary" href="#" id="dispatch-request">Request Ride</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section>
+      <div class="container">
+        <div class="row padding-top-double">
+          <div class="col-sm-6">
+            <h3>Vehicle State</h3>
+            <p>
+Delivers a real-time view of fleet status and availability by detecting when vehicles are available or offline. Additionally, you can store custom data about each vehicle such as booked, fully-loaded and other status.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <ul class="vehicle-status">
+              <li>
+                <img src="/images/140bc59f.car-avatar.png" alt="Car Avatar" width="56" height="56">
+                <div class="content">
+                  <h6>Vehicle 1</h6>
+                  <small>In Transit</small>
+                  <small class="online">Available</small>
+                </div>
+                <div class="point"></div>
+              </li>
+              <li>
+                <img src="/images/140bc59f.car-avatar.png" alt="Car Avatar" width="56" height="56">
+                <div class="content">
+                  <h6>Vehicle 2</h6>
+                  <small>In Transit</small>
+                  <small class="online">Available</small>
+                </div>
+                <div class="point"></div>
+              </li>
+              <li>
+                <img src="/images/140bc59f.car-avatar.png" alt="Car Avatar" width="56" height="56">
+                <div class="content">
+                  <h6>Vehicle 3</h6>
+                  <small>In Transit</small>
+                  <small class="online">Available</small>
+                </div>
+                <div class="point"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div id="geo-fencing">
+              <img src="/images/47c7c4ab.geo-fencing.png" alt="Geo Fencing" width="500" height="300">
+              <img class="geo-alert animate-scroll" src="/images/72f8abfa.alert.png" alt="Alert" width="35" height="48">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <h3>Geo Fencing</h3>
+            <p>
+Trigger actions and alerts based on vehicle location and geographic boundaries (e.g. only vehicles within five miles get dispatch requests, customized traffic alerts, etc.). Create specific channels for individual geographic regions to target communications.              
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="blue">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Reliable Connectivity</h3>
+            <p>
+Maintains persistent mobile network connections with vehicles, regardless of network issues, as well as auto-detection and rapid "catch-up" of messages if a vehicle is temporarily disconnected.
+            </p>
+          </div>
+          <div class="col-sm-6 text-center">
+            <i class="fa fa-signal fa-10x pulse animate-scroll"></i>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section class="gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Getting Started</h3>
+            <p>The first step to building your own transportation solution is signing up for PubNub. It is free and easy to get started and you can sign up using the link on the right.</p>
+          </div>
+          <div class="col-sm-6 text-center">
+            <a href="http://pubnub.com/get-started" target="_blank" class="btn btn-large btn-primary" style="margin-top: 30px">Get Started</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Installing PubNub</h3>
+            <p>Getting started is as easy as embedding the PubNub library into your HTML file. This is done via a script tag and also allows for selecting the specific version you would like to work with. Our library is served via a CDN for the guaranteed fastest performance download.</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="code-wrap pulse animate-scroll" style="height: 220px">
+              <div class="code-header">
+                <ul>
+                  <li class="red"><i class="fa fa-circle"></i></li>
+                  <li class="yellow"><i class="fa fa-circle"></i></li>
+                  <li class="green"><i class="fa fa-circle"></i></li>
+                </ul>
+              </div>
+              <div class="code-content">
+                <ol class="list-code animate" data-type="one">
+                  <li><span>&lt;script src=<span class="blue">"http://cdn.pubnub.com/pubnub.js"</span>&gt;</span></li>
+                  <li>&nbsp;</li>
+                  <li>var pubnub = PUBNUB.init({</li>
+                  <li class="indent">subscribe_key: <span class="blue">'demo'</span>,</li>
+                  <li class="indent">publish_key: <span class="blue">'demo'</span></li>
+                  <li>});</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Publishing Messages</h3>
+            <p>Publishing messages allows you to notify other users in real-time. This can be used for geolocation updates or even dispatch!</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="code-wrap pulse animate-scroll" style="height: 220px">
+              <div class="code-header">
+                <ul>
+                  <li class="red"><i class="fa fa-circle"></i></li>
+                  <li class="yellow"><i class="fa fa-circle"></i></li>
+                  <li class="green"><i class="fa fa-circle"></i></li>
+                </ul>
+              </div>
+              <div class="code-content">
+                <ol class="list-code animate" data-type="one">
+                  <li><span class="comment">// Report location</span></li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.publish({</li>
+                  <li class="indent">channel : <span class="blue">'location_update'</span>,</li>
+                  <li class="indent">message : { id: 10, lat: 37.774682, lng: -122.419710 }</li>
+                  <li>});</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Subscribing to Messages</h3>
+            <p>Subscribing to a channel allows you to listen for real-time updates from anyone who is publishing to the same channel!</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="code-wrap pulse animate-scroll" style="height: 220px">
+              <div class="code-header">
+                <ul>
+                  <li class="red"><i class="fa fa-circle"></i></li>
+                  <li class="yellow"><i class="fa fa-circle"></i></li>
+                  <li class="green"><i class="fa fa-circle"></i></li>
+                </ul>
+              </div>
+              <div class="code-content">
+                <ol class="list-code animate" data-type="one">
+                  <li><span class="comment">// Listen for location updates</span></li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.subscribe({</li>
+                  <li class="indent">channel : <span class="blue">'location_update'</span>,</li>
+                  <li class="indent">message : <span class="red">function</span>(m){ <span class="comment">// Application code</span> }</li>
+                  <li>});</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Detecting Status</h3>
+            <p>Using PubNub Presence you will be able to detect when vehicles come online or go offline as well as store metadata about each of them.</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="code-wrap pulse animate-scroll" style="height: 220px">
+              <div class="code-header">
+                <ul>
+                  <li class="red"><i class="fa fa-circle"></i></li>
+                  <li class="yellow"><i class="fa fa-circle"></i></li>
+                  <li class="green"><i class="fa fa-circle"></i></li>
+                </ul>
+              </div>
+              <div class="code-content">
+                <ol class="list-code animate" data-type="one">
+                  <li><span class="comment">// Listen for dispatch updates</span></li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.subscribe({</li>
+                  <li class="indent">channel : <span class="blue">'dispatch'</span>,</li>
+                  <li class="indent">message : <span class="red">function</span>(m){ <span class="comment">// Application code</span> },</li>
+                  <li class="indent">presence : <span class="red">function</span>(m){ <span class="comment">// Called when a user comes online</span> },</li>
+                  <li class="indent">metadata : { status: <span class="blue">'In Transit'</span> }
+                  </li><li>});</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </section>
+
+      <section>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h3 align="center" class="footer-title">
+                More with the <a href="http://pubnub.com" class="text-red"> PubNub Real-Time Network </a>
+              </h3>
+              <p align="center">
+              Do you like this solution kit?
+              Want to get more stuff like this?<br>
+              Subscribe to
+              <a target="pntwitter" href="http://twitter.com/PubNub" class="text-red">@PubNub</a>
+              news and updates!<br><br>
+              </p>
+
+              <div class="footer-banner">
+                <div class="row-margin-small">
+                  <div class="col-sm-4 col-sm-offset-4">
+                    <a class="btn btn-primary btn-lg btn-block" alt="PubNub Real-Time Network" target="freetrial" href="http://www.pubnub.com/get-started">Try PubNub Today</a> <div class="text-center">or</div> <a class="btn btn-primary btn-lg btn-block" alt="PubNub Contact Us" target="contactus" href="http://www.pubnub.com/company/contact-us/">Contact Us For More Info</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytlU1jQFFuww41zof8kqCHtvAP2zx6XQ&sensor=false">
+        </script>
+
+        <script src="https://pubnub.a.ssl.fastly.net/pubnub.min.js"></script>
+
+        <script data-main="scripts/8389a3b3.main" src="bower_components/requirejs/require.js"></script>
+</body>
+</html>
