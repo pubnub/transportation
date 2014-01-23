@@ -92,6 +92,9 @@
             <p>
               Respond to transportation demand in real-time. Manage real-time messaging and response between vehicles and dispatch, regardless of network conditions. 
             </p>
+            <p>
+              <a class="btn btn-large btn-primary" href="#" id="dispatch-request">Request Ride</a>
+            </p>
           </div>
         </div>
       </div>
@@ -288,6 +291,43 @@
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <br />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Detecting Status</h3>
+            <p>Using PubNub Presence you will be able to detect when vehicles come online or go offline as well as store metadata about each of them.</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="code-wrap pulse animate-scroll" style="height: 220px">
+              <div class="code-header">
+                <ul>
+                  <li class="red"><i class="fa fa-circle"></i></li>
+                  <li class="yellow"><i class="fa fa-circle"></i></li>
+                  <li class="green"><i class="fa fa-circle"></i></li>
+                </ul>
+              </div>
+              <div class="code-content">
+                <ol class="list-code animate" data-type="one">
+                  <li><span class="comment">// Listen for dispatch updates</span></li>
+                  <li>&nbsp;</li>
+                  <li>pubnub.subscribe({</li>
+                  <li class="indent">channel : <span class="blue">'dispatch'</span>,</li>
+                  <li class="indent">message : <span class="red">function</span>(m){ <span class="comment">// Application code</span> },</li>
+                  <li class="indent">presence : <span class="red">function</span>(m){ <span class="comment">// Called when a user comes online</span> },</li>
+                  <li class="indent">metadata : { status: <span class="blue">'In Transit'</span> }
+                  <li>});</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
       </section>
 

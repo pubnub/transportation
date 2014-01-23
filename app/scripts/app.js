@@ -2,6 +2,12 @@
 define(['animation_manager', 'dispatch_app'], function (AnimationManager, DispatchApp) {
     'use strict';
 
+    function easeInOutQuad(t, b, c, d) {
+      var ts = (t /= d) * t;
+      var tc = ts * t;
+      return b + c * (-2 * tc + 3 * ts);
+    };
+
     return {
       init: function () {
         this.pubnub = PUBNUB.init({
@@ -25,6 +31,10 @@ define(['animation_manager', 'dispatch_app'], function (AnimationManager, Dispat
         
         AnimationManager.initialize();
         DispatchApp.initialize(this.pubnub);
+        
+        // Test the animation
+        // this.createNewBus("special", new google.maps.LatLng(37.774682, -122.419710));
+        // this.animateToPosition(this.buses["special"], new google.maps.LatLng(37.778682, -122.419710));
       },
 
       listenForBusUpdates: function () {
@@ -34,26 +44,54 @@ define(['animation_manager', 'dispatch_app'], function (AnimationManager, Dispat
             data.id = data.id.toString();
             var bus = this.buses[data.id];
 
+            var latLng = new google.maps.LatLng(data.lat, data.lon);
+
             // Create new marker if it does not exist
             if (!bus) {
-              bus = this.createNewBus(data.id);
+              bus = this.createNewBus(data.id, latLng);
+            } else {
+              this.animateToPosition(this.buses[data.id], latLng);
             }
-
-            var latLng = new google.maps.LatLng(data.lat, data.lon);
-            bus.setPosition(latLng);
           }).bind(this)
         });
       },
 
-      createNewBus: function (id) {
-        var latLng = new google.maps.LatLng(0, 0),
-            image = '/images/taxiicon.png';
+      animateToPosition: function (marker, position) {
+        var start = marker.getPosition(),
+            time = 0,
+            duration = 5,
+            lastTime = Date.now();
+        
+        start = { lat: start.lat(), lng: start.lng() };
+        position = { lat: position.lat(), lng: position.lng() };
+
+        if (Math.abs(start.lat - position.lat) < 0.000001 && Math.abs(start.lng - position.lng) < 0.000001) {
+          return;
+        }
+
+        var animate = function () {
+          time += (Date.now() - lastTime) / 1000;
+          lastTime = Date.now();
+          var lat = easeInOutQuad(time, start.lat, (start.lat - position.lat), duration),
+              lng = easeInOutQuad(time, start.lng, (start.lng - position.lng), duration);
+          marker.setPosition(new google.maps.LatLng(lat, lng));
+
+          if (time < duration) {
+            requestAnimationFrame(animate);
+          }
+        };
+        requestAnimationFrame(animate);
+      },
+
+      createNewBus: function (id, latLng) {
+        var image = '/images/taxiicon.png';
 
         this.buses[id] = new google.maps.Marker({
           position: latLng,
           map: this.map,
           title: "Bus: " + id,
-          icon: image
+          icon: image,
+          animation: google.maps.Animation.DROP
         });
 
         return this.buses[id];
