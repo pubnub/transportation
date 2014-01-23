@@ -168,36 +168,36 @@ table {
 
 @font-face {
   font-family: "proxima-nova-thin";
-  src: url("/static/fonts/proximanova-thin/ProximaNova-Thin-webfont.eot");
-  src: url("/static/fonts/proximanova-thin/ProximaNova-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("/static/fonts/proximanova-thin/ProximaNova-Thin-webfont.woff") format("woff"), url("/static/fonts/proximanova-thin/ProximaNova-Thin-webfont.ttf") format("truetype"), url("/static/fonts/proximanova-thin/ProximaNova-Thin-webfont.svg#proxima_nova_ththin") format("svg");
+  src: url("../static/fonts/proximanova-thin/ProximaNova-Thin-webfont.eot");
+  src: url("../static/fonts/proximanova-thin/ProximaNova-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../static/fonts/proximanova-thin/ProximaNova-Thin-webfont.woff") format("woff"), url("../static/fonts/proximanova-thin/ProximaNova-Thin-webfont.ttf") format("truetype"), url("../static/fonts/proximanova-thin/ProximaNova-Thin-webfont.svg#proxima_nova_ththin") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "proxima-nova-light";
-  src: url("/static/fonts/proximanova-light/ProximaNova-Light-webfont.eot");
-  src: url("/static/fonts/proximanova-light/ProximaNova-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/static/fonts/proximanova-light/ProximaNova-Light-webfont.woff") format("woff"), url("/static/fonts/proximanova-light/ProximaNova-Light-webfont.ttf") format("truetype"), url("/static/fonts/proximanova-light/ProximaNova-Light-webfont.svg#proxima_nova_ltlight") format("svg");
+  src: url("../static/fonts/proximanova-light/ProximaNova-Light-webfont.eot");
+  src: url("../static/fonts/proximanova-light/ProximaNova-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../static/fonts/proximanova-light/ProximaNova-Light-webfont.woff") format("woff"), url("../static/fonts/proximanova-light/ProximaNova-Light-webfont.ttf") format("truetype"), url("../static/fonts/proximanova-light/ProximaNova-Light-webfont.svg#proxima_nova_ltlight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "proxima-nova";
-  src: url("/static/fonts/proximanova-regular/ProximaNova-Reg-webfont.eot");
-  src: url("/static/fonts/proximanova-regular/ProximaNova-Reg-webfont.eot?#iefix") format("embedded-opentype"), url("/static/fonts/proximanova-regular/ProximaNova-Reg-webfont.woff") format("woff"), url("/static/fonts/proximanova-regular/ProximaNova-Reg-webfont.ttf") format("truetype"), url("/static/fonts/proximanova-regular/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular") format("svg");
+  src: url("../static/fonts/proximanova-regular/ProximaNova-Reg-webfont.eot");
+  src: url("../static/fonts/proximanova-regular/ProximaNova-Reg-webfont.eot?#iefix") format("embedded-opentype"), url("../static/fonts/proximanova-regular/ProximaNova-Reg-webfont.woff") format("woff"), url("../static/fonts/proximanova-regular/ProximaNova-Reg-webfont.ttf") format("truetype"), url("../static/fonts/proximanova-regular/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "proxima-nova-italic";
-  src: url("/static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.eot");
-  src: url("/static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.eot?#iefix") format("embedded-opentype"), url("/static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.woff") format("woff"), url("/static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.ttf") format("truetype"), url("/static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.svg#proxima_novaregular_italic") format("svg");
+  src: url("../static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.eot");
+  src: url("../static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.eot?#iefix") format("embedded-opentype"), url("../static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.woff") format("woff"), url("../static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.ttf") format("truetype"), url("../static/fonts/proximanova-italic/ProximaNova-RegIt-webfont.svg#proxima_novaregular_italic") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "proxima-nova-bold";
-  src: url("/static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.eot");
-  src: url("/static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.eot?#iefix") format("embedded-opentype"), url("/static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.woff") format("woff"), url("/static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.ttf") format("truetype"), url("/static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.svg#proxima_nova_ltsemibold") format("svg");
+  src: url("../static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.eot");
+  src: url("../static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.eot?#iefix") format("embedded-opentype"), url("../static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.woff") format("woff"), url("../static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.ttf") format("truetype"), url("../static/fonts/proximanova-semibold/ProximaNova-Sbold-webfont.svg#proxima_nova_ltsemibold") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2045,7 +2045,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   border-color: #468847;
   background-color: #dff0d8; }
 
-.form-control-static {
+.form-control-../static {
   margin-bottom: 0;
   padding-top: 7px; }
 
@@ -2738,10 +2738,10 @@ input[type="button"].btn-block {
       margin-right: 0;
       margin-left: 0; } }
 
-.navbar-static-top {
+.navbar-../static-top {
   border-width: 0 0 1px; }
   @media (min-width: 768px) {
-    .navbar-static-top {
+    .navbar-../static-top {
       border-radius: 0; } }
 
 .navbar-fixed-top,
@@ -2757,7 +2757,7 @@ input[type="button"].btn-block {
   @media (max-width: 768px) {
     .navbar-fixed-top,
     .navbar-fixed-bottom {
-      position: static; } }
+      position: ../static; } }
 
 .navbar-fixed-top {
   z-index: 1030;
@@ -2807,7 +2807,7 @@ input[type="button"].btn-block {
     line-height: 27px; }
   @media (max-width: 767px) {
     .navbar-nav .open .dropdown-menu {
-      position: static;
+      position: ../static;
       float: none;
       width: auto;
       margin-top: 0;
@@ -3253,8 +3253,8 @@ input[type="button"].btn-block {
 
 @font-face {
   font-family: "FontAwesome";
-  src: url("/static/fonts/fontawesome-webfont.eot?v=4.0.1");
-  src: url("/static/fonts/fontawesome-webfont.eot?#iefix&v=4.0.1") format("embedded-opentype"), url("/static/fonts/fontawesome-webfont.woff?v=4.0.1") format("woff"), url("/static/fonts/fontawesome-webfont.ttf?v=4.0.1") format("truetype"), url("/static/fonts/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular") format("svg");
+  src: url("../static/fonts/fontawesome-webfont.eot?v=4.0.1");
+  src: url("../static/fonts/fontawesome-webfont.eot?#iefix&v=4.0.1") format("embedded-opentype"), url("../static/fonts/fontawesome-webfont.woff?v=4.0.1") format("woff"), url("../static/fonts/fontawesome-webfont.ttf?v=4.0.1") format("truetype"), url("../static/fonts/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -11045,23 +11045,23 @@ section {
       padding: 20px 0; } }
 
 .globe {
-  background-image: url(/static/images/structure/bg-header-globe.png);
+  background-image: url(../static/images/structure/bg-header-globe.png);
   background-position: bottom center;
   background-repeat: no-repeat; }
 
 .globe-corner {
-  background-image: url(/static/images/structure/bg-globe.png);
+  background-image: url(../static/images/structure/bg-globe.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   padding: 120px 0 80px; }
 
 .globe-fade {
-  background-image: url(/static/images/structure/bg-globe-fade.png);
+  background-image: url(../static/images/structure/bg-globe-fade.png);
   background-position: bottom center;
   background-repeat: no-repeat; }
 
 .company-illustrated {
-  background-image: url(/static/images/structure/bg-illustrated.jpg);
+  background-image: url(../static/images/structure/bg-illustrated.jpg);
   background-position: center right;
   background-repeat: no-repeat; }
   @media (max-width: 768px) {
@@ -11069,7 +11069,7 @@ section {
       background-image: none; } }
 
 .map {
-  background: #9fc1ff url(/static/images/structure/map-zoomed-out.jpg) no-repeat center center; }
+  background: #9fc1ff url(../static/images/structure/map-zoomed-out.jpg) no-repeat center center; }
 
 .globe-highlight {
   position: absolute;

@@ -84,7 +84,7 @@ define(['animation_manager', 'dispatch_app'], function (AnimationManager, Dispat
       },
 
       createNewBus: function (id, latLng) {
-        var image = '/static/taxiicon.png';
+        var image = 'static/taxiicon.png';
 
         this.buses[id] = new google.maps.Marker({
           position: latLng,
