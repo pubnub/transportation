@@ -8,5 +8,7 @@
     "jquery": "~1.9.1",
     "font-awesome": "~4.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prism": "git@github.com:LeaVerou/prism.git#gh-pages"
+  }
 }

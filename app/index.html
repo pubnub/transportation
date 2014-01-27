@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="bower_components/prism/themes/prism.css">
         <link rel="stylesheet" href="styles/animate.css">
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/main.css">
@@ -72,6 +73,14 @@ Provides a real-time map view of all vehicle locations by streaming location dat
 
           <div class="col-sm-6">
             <img class="bounce animate-scroll" src="images/location-tracking.png" alt="Location Tracking" width="500" height="300" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <pre><code class="language-javascript">
+              var pubnub = new PUBNUB();
+            </code></pre>
           </div>
         </div>
       </div>
@@ -385,6 +394,7 @@ Maintains persistent mobile network connections with vehicles, regardless of net
         </script>
 
         <script src="https://pubnub.a.ssl.fastly.net/pubnub.min.js"></script>
+        <script src="bower_components/prism/prism.js"></script>
 
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
