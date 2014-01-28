@@ -42,6 +42,14 @@ define([], function () {
 
     onDispatchRequested: function () {
       this.text.innerHTML = statusText.DISPATCH_FOUND;
+
+      this.marker = new google.maps.Marker({
+        position: new google.maps.LatLng(37.773738, -122.408863),
+        map: this.map,
+        title: "Requested Ride",
+        icon: 'static/taxiicon.png',
+        animation: google.maps.Animation.DROP
+      });
     },
 
     onDispatchRequest: function (event) {
