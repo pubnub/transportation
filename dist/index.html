@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="styles/f1ce4dfd.prism.css">
-        <link rel="stylesheet" href="styles/dc4fa7b0.main.css">
+        <link rel="stylesheet" href="styles/7ee9fa80.main.css">
         <script src="scripts/vendor/d7100892.modernizr.js"></script>
     </head>
     <body>
@@ -192,6 +192,44 @@ Delivers a real-time view of fleet status and availability by detecting when veh
             </ul>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <pre><code class="language-javascript">
+// Giving the vehicle status
+pubnub.subscribe({
+  channel: 'vehicle_status',
+  message: function (message) {
+    // App code...
+  },
+  metadata: {
+    vehicle_id: 22,
+    state: {
+      type: "in_transit",
+      time: 12345
+    }
+  }
+});
+            </code></pre>
+          </div>
+          <div class="col-sm-6">
+            <pre><code class="language-javascript">
+// Getting the current status of vehicles
+pubnub.here_now({
+  channel: 'vehicle_status',
+  metadata: 1,
+  callback: function (data) {
+    console.log("There are " + data.uuids.length + " online.");
+  }
+});
+
+
+
+
+
+            </code></pre>
+          </div>
+        </div>
       </div>
       </section>
 
@@ -211,6 +249,39 @@ Trigger actions and alerts based on vehicle location and geographic boundaries (
             </p>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <pre><code class="language-javascript">
+// Publishing location data
+navigator.geolocation.getCurrentPosition(function (position) {
+  pubnub.publish({
+    channel: "geofencing",
+    message: {
+      user_id: 42,
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    }
+  });
+});
+            </code></pre>
+          </div>
+          <div class="col-sm-6">
+            <pre><code class="language-javascript">
+// Geofencing user locations
+pubnub.subscribe({
+  channel: "geofencing",
+  message: function (message) {
+    if (insideGeoNode(message.lat, message.lng)) {
+      console.log("The user " + message.user_id + " is in the node!");
+    }
+  }
+});
+
+
+            </code></pre>
+          </div>
+        </div>
       </div>
       </section>
 
@@ -225,6 +296,22 @@ Maintains persistent mobile network connections with vehicles, regardless of net
           </div>
           <div class="col-sm-6 text-center">
             <i class="fa fa-signal fa-10x pulse animate-scroll"></i>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="images/9e57d062.network_arch.png" alt="Network Architecture" width="500" height="300">
+          </div>
+          <div class="col-sm-6">
+            <h3>Flexible Architecture</h3>
+            <p>
+              PubNub manages the real time connectivity for your application while working seamlessly with your application architecture. Whether you're using Backbone.JS, NodeJS or Scala - PubNub provides client SDKs for all major frameworks.
+            </p>
           </div>
         </div>
       </div>
