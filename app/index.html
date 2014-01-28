@@ -79,7 +79,27 @@ Provides a real-time map view of all vehicle locations by streaming location dat
         <div class="row">
           <div class="col-sm-6">
             <pre><code class="language-javascript">
-              var pubnub = new PUBNUB();
+// Publishing location data
+pubnub.publish({
+  channel: 'vehicle_locations',
+  message: {
+    vehicle_id: 10,
+    lat: -37.123,
+    lng: 120.456
+  }
+});
+            </code></pre>
+          </div>
+          <div class="col-sm-6">
+            <pre><code class="language-javascript">
+// Subscribing to location updates
+pubnub.subscribe({
+  channel: 'vehicle_loations',
+  message: function (message) {
+    console.log("Vehicle: " + message.id);
+    console.log("Is located at: " + message.lat + ", " + message.lng);
+  }
+});
             </code></pre>
           </div>
         </div>
@@ -95,9 +115,6 @@ Provides a real-time map view of all vehicle locations by streaming location dat
               <div id="dispatch-map"></div>
               <div id="dispatch-text"></div>
             </div>
-
-            <!--<img class="shake animate-scroll" src="images/phone-concept.png" alt="Phone" width="174" height="300" />
-            <img id="mobile-alert" class="animate-scroll" src="images/mobile-alert-1.png" alt="Mobile Alert" width="93" height="35" />-->
           </div>
 
           <div class="col-sm-6">
@@ -108,6 +125,33 @@ Responds to transportation demand in real-time by managing  messaging and respon
             <p>
               <a class="btn btn-large btn-primary" href="#" id="dispatch-request">Request Ride</a>
             </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <pre><code class="language-javascript">
+// Listening for dispatch data
+pubnub.subscribe({
+  channel: 'dispatch',
+  message: function (message) {
+    console.log("Picking up user at: " + message.lat + ", " + message.lng);
+    // Business logic...
+  }
+});
+            </code></pre>
+          </div>
+          <div class="col-sm-6">
+            <pre><code class="language-javascript">
+// Requesting a ride
+pubnub.publish({
+  channel: 'dispatch',
+  message: {
+    user_id: 42,
+    lat: -37.945,
+    lng: 122.574
+  }
+});
+            </code></pre>
           </div>
         </div>
       </div>
