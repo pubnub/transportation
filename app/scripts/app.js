@@ -40,20 +40,40 @@ define(['animation_manager', 'dispatch_app'], function (AnimationManager, Dispat
       listenForBusUpdates: function () {
         this.pubnub.subscribe({
           channel: 'test_bus',
-          callback: (function (data) {
-            data.id = data.id.toString();
-            var bus = this.buses[data.id];
+          callback: this.onBusUpdate.bind(this)
+        });
 
-            var latLng = new google.maps.LatLng(data.lat, data.lon);
-
-            // Create new marker if it does not exist
-            if (!bus) {
-              bus = this.createNewBus(data.id, latLng);
-            } else {
-              this.animateToPosition(this.buses[data.id], latLng);
+        // Get the history of the last N publishes so the page is not blank
+        this.pubnub.history ({
+          channel: 'test_bus',
+          count: 50,
+          reverse: false,
+          error: function(){
+            console.log("There was an error with the history request.");
+          },
+          callback: (function (message) {
+            if (message[0]) {
+              for (var i = 0; i < message[0].length; i++) {
+                var data = message[0][i];
+                this.onBusUpdate(data);
+              }
             }
           }).bind(this)
         });
+      },
+
+      onBusUpdate: function (data) {
+        data.id = data.id.toString();
+        var bus = this.buses[data.id];
+
+        var latLng = new google.maps.LatLng(data.lat, data.lon);
+
+        // Create new marker if it does not exist
+        if (!bus) {
+          bus = this.createNewBus(data.id, latLng);
+        } else {
+          this.animateToPosition(this.buses[data.id], latLng);
+        }
       },
 
       animateToPosition: function (marker, position) {

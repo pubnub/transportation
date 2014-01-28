@@ -69,8 +69,9 @@
           <div class="col-sm-6">
             <h3>Location Tracking</h3>
             <p>
-Provides a real-time map view of all vehicle locations by streaming location data from each vehicle for delivery or arrival information. Stream real-time geo coordinates using PubNub’s Data Push technology.
+Provides a real-time map view of all vehicle locations by streaming location data from each vehicle for delivery or arrival information. Stream real-time geo coordinates using PubNub’s Data Stream technology.
             </p>
+            <a class="btn btn-white" href="http://www.pubnub.com/how-it-works/data-push/" target="_blank">Read More About PubNub Data Stream Technology &rsaquo;</a>
           </div>
 
           <div class="col-sm-6">
@@ -122,7 +123,7 @@ pubnub.subscribe({
           <div class="col-sm-6">
             <h3>Dispatch</h3>
             <p>
-Responds to transportation demand in real-time by managing  messaging and response between vehicles and dispatch. Works seamlessly across all device platforms from desktop to mobile.              
+Responds to transportation demand in real-time by managing messaging and response between vehicles and dispatch. Works seamlessly across all device platforms from desktop to mobile. All powered by <a href="http://www.pubnub.com/how-it-works/data-push/" target="_blank">PubNub Data Stream Technology</a>.
             </p>
             <p>
               <a class="btn btn-large btn-primary" href="#" id="dispatch-request">Request Ride</a>
@@ -165,7 +166,7 @@ pubnub.publish({
           <div class="col-sm-6">
             <h3>Vehicle State</h3>
             <p>
-Delivers a real-time view of fleet status and availability by detecting when vehicles are available or offline. Additionally, you can store custom data about each vehicle such as booked, fully-loaded and other status.
+Delivers a real-time view of fleet status and availability by detecting when vehicles are available or offline. Additionally, you can store custom data about each vehicle such as booked, fully-loaded and other status using <a href="http://www.pubnub.com/how-it-works/presence/" target="_blank">PubNub Presence</a>.
             </p>
           </div>
           <div class="col-sm-6">
@@ -253,8 +254,9 @@ pubnub.here_now({
           <div class="col-sm-6">
             <h3>Geo Fencing</h3>
             <p>
-Trigger actions and alerts based on vehicle location and geographic boundaries (e.g. only vehicles within five miles get dispatch requests, customized traffic alerts, etc.). Create specific channels for individual geographic regions to target communications.              
+Trigger actions and alerts based on vehicle location and geographic boundaries (e.g. only vehicles within five miles get dispatch requests, customized traffic alerts, etc.). Create specific channels for individual geographic regions to target communications.
             </p>
+            <a class="btn btn-blue" href="http://www.pubnub.com/blog/building-real-time-geolocation-apps-with-javascript-and-pubnub/" target="_blank">Read more about PubNub and Geolocation &rsaquo;</a>
           </div>
         </div>
 
@@ -299,7 +301,7 @@ pubnub.subscribe({
           <div class="col-sm-6">
             <h3>Reliable Connectivity</h3>
             <p>
-Maintains persistent mobile network connections with vehicles, regardless of network issues, as well as auto-detection and rapid "catch-up" of messages if a vehicle is temporarily disconnected.
+Maintains persistent mobile network connections with vehicles, regardless of network issues, as well as auto-detection. Using <a href="http://www.pubnub.com/how-it-works/storage-and-playback/" target="_blank">PubNub Storage & Playback</a> you can do a rapid "catch-up" of messages if a vehicle is temporarily disconnected.
             </p>
           </div>
           <div class="col-sm-6 text-center">
@@ -318,7 +320,7 @@ Maintains persistent mobile network connections with vehicles, regardless of net
           <div class="col-sm-6">
             <h3>Flexible Architecture</h3>
             <p>
-              PubNub manages the real time connectivity for your application while working seamlessly with your application architecture. Whether you're using Backbone.JS, NodeJS or Scala - PubNub provides client SDKs for all major frameworks.
+              <a href="http://www.pubnub.com/how-it-works/network/" target="_blank">The PubNub Network</a> manages the real time connectivity for your application while working seamlessly with your application architecture. Whether you're using Backbone.JS, NodeJS or Scala - PubNub provides client SDKs for all major frameworks.
             </p>
           </div>
         </div>
