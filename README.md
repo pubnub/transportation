@@ -1,6 +1,6 @@
-PubNub Transportation Solution Kit
+PubNub Transportation Solution Examples
 ====================================
-The PubNub Fleet Management Solution Kit provides the real-time building blocks to jump start the development of a transportation management application, including taxi, fleet management and delivery service apps. Built on the PubNub Real-Time Network, the solution kit components are supported on over 50+ SDKs and are globally-scaled, reliable and secure.
+The PubNub Fleet Management Solution Examples provides the real-time building blocks to jump start the development of a transportation management application, including taxi, fleet management and delivery service apps. Built on the PubNub Real-Time Network, the solution kit components are supported on over 50+ SDKs and are globally-scaled, reliable and secure.
 
 # Features
 
