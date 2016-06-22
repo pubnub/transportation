@@ -2,7 +2,7 @@ PubNub Transportation Solution Examples
 ====================================
 The PubNub Fleet Management Solution Examples provides the real-time building blocks to jump start the development of a transportation management application, including taxi, fleet management and delivery service apps. Built on the PubNub Real-Time Network, the solution kit components are supported on over 50+ SDKs and are globally-scaled, reliable and secure.
 
-# Features
+# Examples
 
 * Location Tracking - Understand delivery or arrival to provide better customer experience.  
 * Dispatch - Manage real-time messaging and response between vehicles and dispatch, regardless of network conditions.  
